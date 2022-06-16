@@ -1,21 +1,21 @@
 @font-face {
     font-family: Lato-Regular;
-    src: url(fonts/Lato-Regular.ttf);
+    src: url(../fonts/Lato-Regular.ttf);
 }
 
 @font-face {
     font-family: Lato-Bold;
-    src: url(fonts/Lato-Bold.ttf);
+    src: url(../fonts/Lato-Bold.ttf);
 }
 
 @font-face {
     font-family: Lato-Black;
-    src: url(fonts/Lato-Black.ttf);
+    src: url(../fonts/Lato-Black.ttf);
 }
 
 @font-face {
     font-family: Lato-Italic;
-    src: url(fonts/Lato-Italic.ttf);
+    src: url(../fonts/Lato-Italic.ttf);
 }
 
 * {
@@ -37,6 +37,8 @@
     margin: 0 auto;
 }
 
+/* ШАПКА САЙТА */
+
 .header {
     height: 75px;
     display: flex;
@@ -57,6 +59,8 @@
 .header_icon {
     margin: 0 30px 0;
 }
+
+/* ГЛАВНАЯ СТРАНИЦА */
 
 .BrandLogo {
     width: 50%;
@@ -135,21 +139,21 @@
 
 .category1 {
     height: 260px;
-    background-image: url(img/categories/for_women1.jpg);
+    background-image: url(../img/categories/for_women1.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .category2 {
-    background-image: url(img/categories/for_men1.jpg);
+    background-image: url(../img/categories/for_men1.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .category3 {
-    background-image: url(img/categories/for_kids1.jpg);
+    background-image: url(../img/categories/for_kids1.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -158,7 +162,7 @@
 .category4 {
     width: 316%;
     height: 180px;
-    background-image: url(img/categories/f_accesories1.jpg);
+    background-image: url(../img/categories/f_accesories1.jpg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,12 +205,8 @@
     position: relative;
 }
 
-.box:hover {
-    opacity: 0.8;
-}
-
 .dark {
-    background: rgba(0,0,0,3);
+    background: rgba(0, 0, 0, 3);
     position: absolute;
     top: -2px;
     opacity: 0;
@@ -233,10 +233,6 @@
     color: white;
     margin-left: 11px;
 }
-
-/*.product_img:hover {
-    filter: brightness(40%);
-}*/
 
 .product_info {
     width: 314px;
@@ -283,6 +279,8 @@
     margin-bottom: 16px;
 }
 
+/* ФУТЕР */
+
 .footer_top {
     background: #222224;
 }
@@ -314,7 +312,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: url(img/photo_subscribe.jpg);
+    background-image: url(../img/photo_subscribe.jpg);
     height: 448px;
 }
 
@@ -402,6 +400,8 @@
     background: #F16D7F;
 }
 
+/* АДАПТИВ ГЛАВНОЙ СТРАНИЦЫ */
+
 @media (max-width: 1024px) {
     .container {
         max-width: 1024px;
@@ -487,7 +487,7 @@
     .copy_text {
         margin-left: 32px;
     }
-    
+
     .social {
         margin-right: 32px;
     }
@@ -628,4 +628,215 @@
     .product_info {
         width: 80%;
     }
+}
+
+/* СТРАНИЦА КАТАЛОГА */
+
+.current-page {
+    color: #F16D7F;
+    font-weight: bold;
+}
+
+.top_title {
+    height: 148px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #F8F3F4;
+}
+
+.top_title :nth-child(1) {
+    margin-right: 150px;
+    font-weight: 400;
+}
+
+.top_title :nth-child(2) {
+    margin-left: 100px;
+}
+
+.nav_in {
+    align-content: center;
+}
+
+.nav_in :nth-child(1) {
+    margin: 0;
+}
+
+.nav_in :nth-child(2) {
+    margin: 0;
+}
+
+.nav_in :nth-child(3) {
+    color: #F16D7F;
+    font-weight: bold;
+}
+
+.nav_in a {
+    text-decoration: none;
+    color: #636363;
+}
+
+.nav_in a:hover {
+    color: #F16D7F;
+    font-weight: bold;
+}
+
+.filters {
+    margin-left: 15%;
+    padding-top: 55px;
+    padding-bottom: 20px;
+    display: flex;
+}
+
+.filters :nth-child(3) {
+    position: relative;
+}
+
+.size-filter {
+    width: 79px;
+    height: 103px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #FFFFFF;
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+    list-style-type: none;
+    padding: 10px;
+    right: -53px;
+    top: 17.5px;
+}
+
+.filters div .size-filter :nth-child(1) {
+    margin: 0;
+}
+
+.filters div .size-filter :nth-child(n) {
+    font-weight: 400;
+    width: 50%;
+    font-size: 14px;
+    line-height: 16px;
+    color: #6F6E6E;
+    margin: 0;
+}
+
+.filters :nth-child(3):hover .size-filter {
+    animation-duration: 0.7s;
+    animation-name: disp;
+}
+
+@keyframes disp {
+    from {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    to {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.filters div .animated-arrow {
+    transition: transform 0.5s;
+}
+
+.filters div:hover .animated-arrow {
+    transform: rotate(180deg);
+}
+
+.filters :first-child {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    border: none;
+    margin-right: 304px;
+}
+
+.filters :first-child img {
+    margin: 0;
+}
+
+.filters :first-child:hover {
+    cursor: pointer;
+}
+
+.filters div {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.filters div:hover {
+    color: #F16D7F;
+    text-shadow: 1px 1px #d7d7d7;
+}
+
+.filters div :nth-child(1) {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.filters :nth-child(2) {
+    margin-right: 27px;
+}
+
+.filters :nth-child(3) {
+    margin-right: 27px;
+}
+
+.number-nav {
+    margin-top: 48px;
+    margin-bottom: 96px;
+}
+
+.item-list {
+    width: 265px;
+    border: 1px solid #EBEBEB;
+    border-radius: 5px;
+    margin: auto;
+    padding: 11px;
+}
+
+.item-list li {
+    display: inline;
+    margin: 0 10px 0px;
+}
+
+.pager :nth-child(6) {
+    margin-right: 0;
+}
+
+.pager p {
+    display: inline;
+    color: #c7c7c7;
+}
+
+.pager :nth-child(8) {
+    margin-left: 0;
+}
+
+.pager :last-child img {
+    margin-top: 3px;
+}
+
+.pager a {
+    text-decoration: none;
+    color: #c7c7c7;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.pager a:hover {
+    color: #F16D7F;
+    font-weight: bold;
 }
