@@ -705,9 +705,9 @@
     display: none;
 }
 
-.filter-text-menu {
-    margin-left: 10px;
-    margin-bottom: 15px;
+.filter-text:hover {
+    color: #F16D7F;
+    cursor: pointer;
 }
 
 .filter-line {
@@ -838,7 +838,7 @@
 }
 
 .item-list {
-    width: 265px;
+    width: 285px;
     border: 1px solid #EBEBEB;
     border-radius: 5px;
     margin: auto;
