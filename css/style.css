@@ -21,11 +21,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Lato-Regular;
+    font-family: Lato-Regular, sans-serif;
 }
 
 .italicText {
-    font-family: Lato-Italic;
+    font-family: Lato-Italic, sans-serif;
 }
 
 .colorword {
@@ -56,6 +56,14 @@
     margin-left: 190px;
 }
 
+.header_icons2 :nth-child(n) {
+    transition: 0.1s;
+}
+
+.header_icons2 :nth-child(n):hover {
+    transform: scale(1.2);
+}
+
 .header_icon {
     margin: 0 30px 0;
 }
@@ -70,15 +78,15 @@
 
 .theBrand {
     margin-left: 16px;
-    font-size: 32px
+    font-size: 32px;
 }
 
 .theBrandheader {
-    font-family: Lato-Black;
+    font-family: Lato-Black, sans-serif;
 }
 
 .theBrandtext {
-    font-family: Lato-Bold;
+    font-family: Lato-Bold, sans-serif;
 }
 
 .line {
@@ -117,10 +125,11 @@
 
 .category_link {
     text-decoration: none;
+    transition: 0.2s;
 }
 
 .category_link:hover {
-    text-decoration: underline;
+    transform: scale(1.2);
 }
 
 .category_link:visited {
@@ -215,6 +224,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.2s;
 }
 
 .dark:hover {
@@ -261,6 +271,7 @@
     border: 1px solid #F16D7F;
     text-decoration: none;
     padding: 14px 38px;
+    transition: color 0.2s;
 }
 
 .ButtonLink:hover {
@@ -287,12 +298,11 @@
 
 .benefit_box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .benefit {
-    margin-top: 104px;
-    margin-bottom: 104px;
+    margin: 104px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -313,6 +323,7 @@
     justify-content: space-around;
     align-items: center;
     background-image: url(../img/photo_subscribe.jpg);
+    background-repeat: round;
     height: 448px;
 }
 
@@ -365,6 +376,7 @@
     border-top-right-radius: 23px;
     border-bottom-right-radius: 23px;
     color: white;
+    transition: 0.2s;
 }
 
 .subscribe_button:hover {
@@ -394,10 +406,11 @@
     width: 32px;
     height: 32px;
     margin-left: 4px;
+    transition: 0.2s;
 }
 
 .socialicon:hover {
-    background: #F16D7F;
+    transform: scale(1.1);
 }
 
 /* АДАПТИВ ГЛАВНОЙ СТРАНИЦЫ */
@@ -682,49 +695,84 @@
 }
 
 .filters {
-    margin-left: 15%;
+    padding-left: 230px;
     padding-top: 55px;
     padding-bottom: 20px;
     display: flex;
 }
 
-.filters :nth-child(3) {
-    position: relative;
+.filter-phone-button {
+    display: none;
 }
 
-.size-filter {
-    width: 79px;
-    height: 103px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background: #FFFFFF;
-    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
-    position: absolute;
-    z-index: 1;
-    visibility: hidden;
-    animation-fill-mode: forwards;
-    list-style-type: none;
-    padding: 10px;
-    right: -53px;
-    top: 17.5px;
+.filter-text-menu {
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
 
-.filters div .size-filter :nth-child(1) {
-    margin: 0;
+.filter-line {
+    border-left: 4px solid #F16D7F;
+    height: 30px;
 }
 
-.filters div .size-filter :nth-child(n) {
+.size {
+    margin-left: 10px;
+}
+
+.checkbox_ui {
+    width: 12px;
+    height: 12px;
+    border: 1px solid #EBEBEB;
+    border-radius: 2px;
+}
+
+.checkbox_ui:hover {
+    background: #f1f1f1;
+}
+
+.galka {
+    width: 4px;
+    height: 8px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(43deg);
+    margin-left: 3px;
+}
+
+.gS {
+    top: 27px;
+}
+
+.gM {
+    top: 1px;
+    right: 49px;
+}
+
+.gL {
+    top: 59px;
+}
+
+.checkbox_input {
+    display: none;
+}
+
+.checkbox_input:checked~.checkbox_ui {
+    background-color: #F16D7F;
+}
+
+.checkbox_input:checked~.checkbox_ui::before {
+    background-color: #ffffff;
+}
+
+.other-filter .size-filter :nth-child(n) {
     font-weight: 400;
-    width: 50%;
     font-size: 14px;
     line-height: 16px;
     color: #6F6E6E;
-    margin: 0;
 }
 
 .filters :nth-child(3):hover .size-filter {
-    animation-duration: 0.7s;
+    animation-duration: 0.4s;
     animation-name: disp;
 }
 
@@ -740,15 +788,19 @@
     }
 }
 
-.filters div .animated-arrow {
+.animated-arrow {
+    margin-left: 10px;
+}
+
+.other-filter .animated-arrow {
     transition: transform 0.5s;
 }
 
-.filters div:hover .animated-arrow {
+.other-filter:hover .animated-arrow {
     transform: rotate(180deg);
 }
 
-.filters :first-child {
+.first-filter {
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
@@ -757,15 +809,7 @@
     margin-right: 304px;
 }
 
-.filters :first-child img {
-    margin: 0;
-}
-
-.filters :first-child:hover {
-    cursor: pointer;
-}
-
-.filters div {
+.other-filter {
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
@@ -775,21 +819,16 @@
     border: none;
 }
 
-.filters div:hover {
+.other-filter:hover {
     color: #F16D7F;
     text-shadow: 1px 1px #d7d7d7;
 }
 
-.filters div :nth-child(1) {
-    margin-right: 0;
-    margin-left: 10px;
+.other-filter {
+    text-transform: uppercase;
 }
 
-.filters :nth-child(2) {
-    margin-right: 27px;
-}
-
-.filters :nth-child(3) {
+.other-filter {
     margin-right: 27px;
 }
 
@@ -839,4 +878,197 @@
 .pager a:hover {
     color: #F16D7F;
     font-weight: bold;
+}
+
+/*АДАПТИВ КАТАЛОГА*/
+@media (max-width: 1440px) {
+    .filters {
+        padding-left: 150px;
+    }
+}
+
+@media (min-width: 768px) {
+    .first-filter img {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .filters {
+        padding-left: 140px;
+        padding-top: 30px;
+        padding-bottom: 0px;
+
+    }
+
+    .first-filter {
+        margin-right: 270px;
+    }
+
+    .other-first {
+        margin-left: 99px;
+    }
+
+    .other-third {
+        margin-right: 0px;
+    }
+
+    .shirt {
+        display: none;
+    }
+
+    .number-nav {
+        margin-bottom: 63px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .top_title {
+        justify-content: space-between;
+    }
+
+    .filters {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .first-filter {
+        margin-right: 300px;
+    }
+
+    .top_title :first-child {
+        margin-left: 15px;
+    }
+
+    .nav_in {
+        margin-right: 15px;
+    }
+
+    .other-first {
+        margin-left: 62px;
+    }
+
+    .other-third {
+        margin-right: 0px;
+    }
+
+    .shirt {
+        display: none;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .top_title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    .top_title :nth-child(1) {
+        margin: 0;
+    }
+
+    .top_title :nth-child(2) {
+        margin-top: 32px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .filters {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .first-filter {
+        margin-right: 40px
+    }
+
+    .other-first {
+        margin-left: 13px;
+    }
+
+    .other-filter {
+        margin-right: 10px;
+    }
+
+    .other-third {
+        margin-right: 0px;
+    }
+
+    .default-filter {
+        top: -44px;
+        left: -4px;
+    }
+
+    .filter-text {
+        display: none;
+    }
+
+    .filter-phone-button {
+        display: block;
+        width: 37px;
+        height: 25px;
+        margin-left: 19px;
+    }
+
+    .number-nav {
+        margin-bottom: 60px;
+        margin-top: 40px;
+    }
+
+}
+
+@media (max-width: 375px) {
+    .top_title {
+        padding-bottom: 10px;
+    }
+
+    .filters {
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: space-around;
+    }
+
+    .first-filter {
+        margin-right: 19px;
+        margin-left: 10px;
+    }
+
+    .default-filter {
+        width: 340px;
+    }
+
+    .other-filter {
+        margin-right: 8px;
+    }
+
+    .default-filter {
+        top: -35px;
+        left: -5px;
+    }
+
+    .filter-phone-button {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .default-filter {
+        width: 301px;
+    }
+
+    .first-filter {
+        margin-left: 0;
+    }
+
+    .animated-arrow {
+        margin-left: 5px;
+    }
+
+    .other-filter {
+        margin: 0;
+    }
 }
