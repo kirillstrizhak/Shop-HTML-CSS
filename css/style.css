@@ -1457,6 +1457,7 @@
 .cart-content {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 96px;
     margin-bottom: 128px;
 }
@@ -1473,7 +1474,7 @@
     display: flex;
     width: 652px;
     height: 306px;
-    box-shadow: 25px 20px 18px #c1c1c1;
+    box-shadow: 25px 20px 18px #dbdbdb;
 }
 
 .cart-product-img {
@@ -1482,6 +1483,7 @@
 
 .cart-product img {
     width: 100%;
+    height: 100%;
 }
 
 .cart-product-name {
@@ -1555,6 +1557,7 @@
     border-radius: 0px;
     border: 1px solid #A4A4A4;
     background: none;
+    text-transform: uppercase;
     transition: 0.2s;
 }
 
@@ -1664,6 +1667,128 @@
     cursor: pointer;
     background: #FFFFFF;
     color: #F16D7F;
+}
+
+/* АДАПТИВ КОРЗИНЫ */
+
+@media (max-width: 1024px) {
+    .cart-product-box {
+        margin-right: 0;
+        margin-bottom: 64px;
+    }
+
+    .shipping-adress {
+        display: flex;
+    }
+
+    .total-price {
+        height: 145px;
+        margin-top: 33px;
+        margin-left: 7.5px;
+    }
+
+    .adress-forms {
+        margin-right: 7.5px;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .cart-content {
+        margin-top: 39px;
+        margin-bottom: 96px;
+    }
+
+    .cart-product-box {
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+
+    .cart-product {
+        width: 357px;
+        height: 188px;
+    }
+
+    .cart-product-middle {
+        margin: 32px 0 30px 0;
+    }
+
+    .cart-product-img {
+        width: 143px;
+    }
+
+    .cart-product-descr {
+        padding: 17px 13px;
+    }
+
+    .cart-product-name {
+        width: 130px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .cart-product-features {
+        margin-top: 25px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .cart-product-features li {
+        padding: 1.5px 0;
+    }
+
+    .cart-settings-buttons {
+        width: 100%;
+    }
+
+    .cart-settings-buttons button {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        padding: 8px 17px;
+        text-transform: none;
+    }
+
+    .shipping-adress {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .total-price {
+        width: 80%;
+        height: 145px;
+        margin-top: 33px;
+        margin-left: 0;
+    }
+
+    .adress-forms {
+        margin-right: 0;
+    }
+
+    .adress-forms input {
+        width: 320px;
+    }
+
+}
+
+@media (max-width: 320px) {
+
+    .cart-product {
+        width: 295px;
+    }
+
+    .adress-forms input {
+        width: 270px;
+    }
+
+    .close {
+        top: 95px;
+        right: -4px;
+    }
 }
 
 
