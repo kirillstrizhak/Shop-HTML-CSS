@@ -18,6 +18,11 @@
     src: url(../fonts/Lato-Italic.ttf);
 }
 
+@font-face {
+    font-family: Lato-Thin;
+    src: url(../fonts/Lato-Light.ttf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -63,6 +68,11 @@
 
 .header_icon {
     transition: 0.1s;
+    margin: 0 30px 0;
+}
+
+.header_icon:hover {
+    transform: scale(1.2);
 }
 
 .header_logo {
@@ -73,20 +83,12 @@
     transform: rotate(360deg);
 }
 
-.header_icon:hover {
-    transform: scale(1.2);
-}
-
 .header_nav2 :nth-child(n) {
     transition: 0.1s;
 }
 
 .header_nav2 :nth-child(n):hover {
     transform: scale(1.2);
-}
-
-.header_icon {
-    margin: 0 30px 0;
 }
 
 .header_nav2 :nth-child(3) {
@@ -224,7 +226,7 @@
 }
 
 .fetured_items {
-    margin-top: 96px
+    margin-top: 96px;
 }
 
 .fetureditems_title {
@@ -452,7 +454,7 @@
     width: 32px;
     height: 32px;
     margin-left: 4px;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .socialicon:hover {
@@ -881,6 +883,8 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    text-transform: uppercase;
+    margin-right: 27px;
     color: #6F6E6E;
     cursor: pointer;
     background: none;
@@ -890,11 +894,6 @@
 .other-filter:hover {
     color: #F16D7F;
     text-shadow: 1px 1px #d7d7d7;
-}
-
-.other-filter {
-    text-transform: uppercase;
-    margin-right: 27px;
 }
 
 .number-nav {
@@ -1260,7 +1259,6 @@
     border: 1px solid #EAEAEA;
     z-index: 1;
     top: 850px;
-    position: absolute;
 }
 
 .product-descr-top {
@@ -1446,7 +1444,7 @@
 
 /*СТРАНИЦА КОРЗИНЫ*/
 
-.nav_in_cart {
+.nav_in_nonav {
     visibility: hidden;
 }
 
@@ -1651,7 +1649,6 @@
 
 .total-price__bottom button {
     align-self: center;
-    background: none;
     border-radius: 0;
     border: 1px solid #F16D7F;
     padding: 15px 41px;
@@ -1791,5 +1788,256 @@
     }
 }
 
+/*СТРАНИЦА РЕГИСТРАЦИИ*/
+
+.reg-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 300px;
+    margin-top: 64px;
+    margin-bottom: 96px;
+}
+
+.name-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-forms {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-forms h4 {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    color: #222222;
+    margin-bottom: 20px;
+}
+
+.login-forms p {
+    width: 359px;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+    margin-bottom: 39px;
+}
+
+.reg-forms input {
+    width: 350px;
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #A4A4A4;
+    border-radius: 0;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 16px;
+    color: #B1B1B1;
+}
+
+.reg-info h3 {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    font-family: Lato-Thin, sans-serif;
+}
+
+.reg-info p {
+    width: 652px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: 21px 0;
+    font-family: Lato-Thin, sans-serif;
+}
+
+.reg-info ul {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    list-style-image: url(../img/icons/galka.svg);
+    margin-left: 30px;
+}
+
+.reg-info ul li {
+    padding: 8px;
+    font-family: Lato-Thin, sans-serif;
+}
+
+.sex {
+    display: flex;
+    justify-content: space-between;
+    width: 205px;
+    margin: 32px 0;
+}
+
+.sex label {
+    display: flex;
+}
+
+.sex label:hover {
+    cursor: pointer;
+}
+
+.sex label .sex-text {
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 13px;
+    color: #000000;
+    margin-left: 10px;
+    padding-top: 2px;
+}
+
+.sex-radio {
+    position: relative;
+}
+
+.sex-radio input{
+    display: none;
+}
+
+.sex-radio .sex-radio-ui {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: white;
+    border: 1px solid #A4A4A4;
+    border-radius: 50%;
+}
+
+.sex-radio input:checked + .sex-radio-ui {
+    background-color: #ffffff;
+}
+
+.sex-radio input:checked + .sex-radio-ui::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #525252;
+    border-radius: 50%;
+    background: #525252;
+    left: 3px;
+    top: 3px;
+}
+
+.joinNow-button {
+    border-radius: 0;
+    border: 1px solid #F16D7F;
+    padding: 16px 29px;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-align: center;
+    background: #F16D7F;
+    transition: 0.2s;
+}
+
+.joinNow-button:hover {
+    cursor: pointer;
+    background: #FFFFFF;
+    color: #F16D7F;
+}
+
+.joinArrow {
+    text-align: center;
+    padding: 0;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+/* АДАПТИВ СТРАНИЦЫ РЕГИСТРАЦИИ*/
+
+@media (max-width: 1440px) {
+    .reg-content {
+        padding: 0 130px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .reg-content {
+        justify-content: space-around;
+        padding: 0;
+    }
+
+    .reg-info p {
+        width: 354px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .reg-info h3 {
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+    .reg-info ul li {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .reg-content {
+        margin-top: 40px;
+    }
+
+    .reg-info {
+        width: 40%;
+    }
+    
+    .reg-info p {
+        width: 325px;
+    }
+}
+
+@media (max-width: 425px) {
+    .reg-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reg-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reg-info ul {
+        margin-left: 80px;
+    }
+
+    .joinNow-button {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 375px) {
+    .reg-forms input{
+        width: auto;
+    }
+
+    .login-forms p {
+        width: auto;
+    }
+
+    .reg-info p {
+        width: auto;
+    }
+
+    .reg-info ul {
+        margin-left: 55px;
+    }
+}
 
 
